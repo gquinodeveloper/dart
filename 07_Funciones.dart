@@ -1,4 +1,5 @@
 void main() {
+  
   //Las funciones pueden retornar un tipo de dato especifico
   //Pueden ser: int, String, double, bool, dynamic, map, List, Future
   //Pueden tener parámetros, como tampoco tenerlos
@@ -12,7 +13,6 @@ void main() {
 
   imprirTexto("Esto es un texto");
 }
-
 //Función sin retorno, solo se ejecutará por ello la palabra reservada VOID
 //Sin parámetros
 void solopintar() {
@@ -22,9 +22,16 @@ void solopintar() {
 //Funciones flecha
 void imprirTexto(String texto) => print(texto);
 
-//Función con argumentos posicionales O argumentos con Nombre
+//Función con argumentos posicionales o argumentos con Nombre
 //Para esto solo se debe cerrar entre llaves {} todo los parametros
-void saludar({String saluda, String nombre}) {
+//Control del nullsafety dart 2.0
+//Si nuestros parámetros son opcionales, podemos resolverlo con un ? que indica que el parámetros puede aceptar null
+//Si queremos que nuestros parámetros vengan con un valor diferente a null, podemos usar REQUIRED
+void saludar({String? saluda, String? nombre}) {
+  print('$saluda $nombre');
+}
+
+void saludars({required String saluda, required String nombre}) {
   print('$saluda $nombre');
 }
 
