@@ -19,8 +19,10 @@ void main() {
 //Toda clase la inicial siempre es con MAYUSCULA
 //Clase simple
 class Heroe {
-  String nombre;
-  String poder;
+  //Con el signo de ? indico que estas propiedades de mi clase
+  //puedan aceptar valores nulos
+  String? nombre;
+  String? poder;
 
   //Sobre carga, apenas se instancie la clase, se le deberá pasar los valores
   //Nota: Las propiedades se encuentran entre {}, esto indica que el constructor
@@ -31,8 +33,9 @@ class Heroe {
 
 //Clase con mapeo de Json y argumento simple, noten que aqui no hay {} en el constructor de la clase
 class Heroe2 {
-  String nombre;
-  String poder;
+  
+  String? nombre;
+  String? poder;
 
   Heroe2(this.nombre, this.poder);
 
